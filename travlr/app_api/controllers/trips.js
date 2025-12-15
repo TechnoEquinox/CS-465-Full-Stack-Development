@@ -41,7 +41,7 @@ const tripsFindByCode = async (req, res) => {
         // Database returned no data
         return res
             .status(404)
-            .json(err);
+            .json({ message: 'Trip not found' });
     } else {
         // Return resulting trip list
         return res
@@ -75,14 +75,13 @@ const tripsUpdateTrip = async (req, res) => {
     if (!q) { // Database returned no data
         return res
             .status(400)
-            .json(err);
+            .json({ message: 'Trip not found' });
     } else { // Return resulting updated trip
         return res
             .status(201)
             .json(q);
     }
-    // Uncomment the following line to show results of
-    operation
+    // Uncomment the following line to show results of operation
     // on the console
     // console.log(q);
 };
@@ -104,7 +103,7 @@ const tripsAddTrip = async (req, res) => {
     if (!q) { // Database returns no data
         return res
             .status(400)
-            .json(err)
+            .json({ message: 'Trip not found' });
     } else {
         return res
             .status(201)

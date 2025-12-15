@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
-import { TripDataService } from './trip-data.service';
+import { TripDataService } from './trip-data.service'; 
 
 describe('TripDataService', () => {
   let service: TripDataService;
